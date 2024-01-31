@@ -10,6 +10,7 @@ import { SiYoutubegaming } from "react-icons/si";
 import { GiTrophy, GiHanger } from "react-icons/gi";
 import { BsMusicNote } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   //subscribing to the store
@@ -20,10 +21,13 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="p-5 shadow-lg w-48">
+    <div className=" h-screen p-5 shadow-lg w-48">
       <ul className="pb-5">
         <li className="flex items-center pb-2">
-          <MdHomeFilled size={20} /> <span className="ml-1">Home</span>
+          <MdHomeFilled size={20} />
+          <Link to={"/"}>
+            <span className="ml-1">Home</span>
+          </Link>
         </li>
 
         <li className="flex items-center pb-2">
